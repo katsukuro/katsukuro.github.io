@@ -8,6 +8,7 @@
         <p id="path"></p>
     </body>
     <script>
-        document.getElementById("path").innerHTML = "Check backup server 2 " + "https://www2.kayrips.cloud" + window.location.pathname;
+        var backupPath = "https://www2.kayrips.cloud" + window.location.pathname
+        document.getElementById("path").innerHTML = "Check backup server 2 " + '<a href="' + backupPath + '">' + backupPath + '</a>' ;
     </script>
 </html>
