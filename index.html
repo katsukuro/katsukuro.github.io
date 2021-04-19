@@ -2,10 +2,17 @@
 	<header>
 	</header>
 	<h1>Hello World!</h1>
-	<a id="page-referrer"></a>
+	<p id="page-referrer"></p>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 	<script>
-		jQuery(document).ready(function($){ var initreferrer = document.referrer; if(initreferrer.indexOf('kayrips.cloud') === -1 ) { localStorage.setItem('mysite_referrer', initreferrer); } document.getElementById("page-referrer").innerHTML=localStorage.getItem('mysite_referrer'); document.getElementById("page-referrer").value = localStorage.getItem('mysite_referrer'); });
+				jQuery(document).ready(function($) {
+			var initreferrer = document.referrer;
+			if (initreferrer.indexOf('kayrips.cloud') === -1) {
+				localStorage.setItem('mysite_referrer', initreferrer);
+			}
+			document.getElementById("page-referrer").innerHTML = localStorage.getItem('mysite_referrer');
+			document.getElementById("page-referrer").value = localStorage.getItem('mysite_referrer');
+		});
 	</script>
 </html>
