@@ -1,18 +1,16 @@
-<html>
-	<header>
-	</header>
-	<h1>Hello World!</h1>
-	<p id="page-referrer"></p>
+<!DOCTYPE html>
+<html data-destination="https://www2.kayrips.cloud">
+  <head>
+    <noscript><meta id="redirect" http-equiv="refresh" content="5; url=https://www2.kayrips.cloud"></noscript>
+  </head>
 
-	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-	<script>
-				jQuery(document).ready(function($) {
-			var initreferrer = document.referrer;
-			if (initreferrer.indexOf('kayrips.cloud') === -1) {
-				localStorage.setItem('mysite_referrer', initreferrer);
-			}
-			document.getElementById("page-referrer").innerHTML = localStorage.getItem('mysite_referrer');
-			document.getElementById("page-referrer").value = localStorage.getItem('mysite_referrer');
-		});
-	</script>
+  <body>
+    This page has moved. Redirecting...
+    
+  <!-- Redirect in JavaScript with meta refresh fallback above in noscript -->
+  <script>
+  var destination = document.documentElement.getAttribute('data-destination');
+  window.location.href = destination + (window.location.search || '') + (window.location.hash || '');
+  </script>
+  </body>
 </html>
