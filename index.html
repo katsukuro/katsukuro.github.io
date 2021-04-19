@@ -1,18 +1,17 @@
+<!DOCTYPE html>
 <html>
-	<header>
-	</header>
-	<h1>Hello World!</h1>
-	<p id="page-referrer"></p>
-
-	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-	<script type="text/javascript">
-				jQuery(document).ready(function($) {
-			var initreferrer = response.request.headers.get('Referer', None);
-			if (initreferrer.indexOf('kayrips.cloud') === -1) {
-				localStorage.setItem('mysite_referrer', initreferrer);
-			}
-			document.getElementById("page-referrer").innerHTML = localStorage.getItem('mysite_referrer');
-			document.getElementById("page-referrer").value = localStorage.getItem('mysite_referrer');
-		});
-	</script>
+    <head>
+        <title>Test</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+		var referrer = document.referrer;
+        function codeAddress() {
+            alert(referrer);
+        }
+        window.onload = codeAddress;
+        </script>
+    </head>
+    <body>
+    
+    </body>
 </html>
