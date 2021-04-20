@@ -4,14 +4,18 @@
         <title>Test</title>
     </head>
     <body>
-    	<p></p>
+    	<p id="t1"></p>
 		<p></p>
 		<p></p>
 		<script>
+			var title1
+
 			(async () => {
-			const response = await fetch('https://kayrips-cors-proxy.herokuapp.com/https://www1.kayrips.cloud/0:/');
-			const text = await response.text();
-			console.log(text.match(/(?<=\<title>).*(?=\<\/title>)/));
+				const response = await fetch('https://kayrips-cors-proxy.herokuapp.com/https://www1.kayrips.cloud/0:/');
+				const text = await response.text();
+				console.log(text.match(/(?<=\<title>).*(?=\<\/title>)/))
+				text.match(/(?<=\<title>).*(?=\<\/title>)/) = title1;
+				document.getElementById("t1").innerHTML = title1
 			})()
 		</script>
     </body>
