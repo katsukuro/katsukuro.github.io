@@ -13,9 +13,10 @@
 			(async () => {
 				const response = await fetch('https://kayrips-cors-proxy.herokuapp.com/https://www1.kayrips.cloud/0:/');
 				const text = await response.text();
-				console.log(text.match(/(?<=\<title>).*(?=\<\/title>)/))
-				text.match(/(?<=\<title>).*(?=\<\/title>)/) = title1;
+				console.log(text.match(/(?<=\<title>).*(?=\<\/title>)/));
+				title1 = text.match(/(?<=\<title>).*(?=\<\/title>)/);
 			})()
+
 			document.getElementById("t1").innerHTML = title1
 		</script>
     </body>
