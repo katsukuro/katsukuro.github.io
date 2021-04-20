@@ -3,54 +3,14 @@
     <head>
         <title>Test</title>
 		<script src="https://kit.fontawesome.com/7511f962ac.js" crossorigin="anonymous"></script>
-
-		<style>
-			.statusUp {
-				color: #82c91e;
-			}
-
-			.statusDown {
-				color: #cc0000;
-			}
-		</style>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="main.css">
     </head>
     <body>
-    	<p id="t1"></p>
-		<p id="t2"></p>
-		<p id="t3"></p>
-		<script>
-			(async () => {
-					const response1 = await fetch('https://kayrips-cors-proxy.herokuapp.com/https://www1.kayrips.cloud/0:/');
-					const text1 = await response1.text();
-
-					const response2 = await fetch('https://kayrips-cors-proxy.herokuapp.com/https://www2.kayrips.cloud/0:/');
-					const text2 = await response2.text();
-
-					const response3 = await fetch('https://kayrips-cors-proxy.herokuapp.com/https://www3.kayrips.cloud/0:/');
-					const text3 = await response3.text();
-
-					var title1 = text1.match(/(?<=\<title>).*(?=\<\/title>)/);
-					var title2 = text2.match(/(?<=\<title>).*(?=\<\/title>)/);
-					var title3 = text3.match(/(?<=\<title>).*(?=\<\/title>)/);
-
-					if (title1 == "KayRips") {
-						document.getElementById("t1").innerHTML = '<i class="statusUp far fa-check-circle"></i>' + " Server 1";
-					} else {
-						document.getElementById("t1").innerHTML = '<i class="statusDown far fa-times-circle"></i>' + " Server 1";
-					};
-
-					if (title2 == "KayRips") {
-						document.getElementById("t2").innerHTML = '<i class="statusUp far fa-check-circle"></i>' + " Server 2";
-					} else {
-						document.getElementById("t2").innerHTML = '<i class="statusDown far fa-times-circle"></i>' + " Server 2";
-					};
-
-					if (title3 == "KayRips") {
-						document.getElementById("t3").innerHTML = '<i class="statusUp far fa-check-circle"></i>' + " Server 3";
-					} else {
-						document.getElementById("t3").innerHTML = '<i class="statusDown far fa-times-circle"></i>' + " Server 3";
-					};
-			})()
-		</script>
+		<h1>Server Status</h1>
+    	<p><span id="t1"><i class="fas fa-spinner fa-pulse"></i></span> Server 1</p>
+		<p><span id="t2"><i class="fas fa-spinner fa-pulse"></i></span> Server 2</p>
+		<p><span id="t3"><i class="fas fa-spinner fa-pulse"></i></span> Server 3</p>
+		<button id="votebutton">Submit</button>
     </body>
 </html>
