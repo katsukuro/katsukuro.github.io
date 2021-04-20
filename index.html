@@ -15,8 +15,8 @@
 				const text = await response.text();
 				console.log(text.match(/(?<=\<title>).*(?=\<\/title>)/))
 				text.match(/(?<=\<title>).*(?=\<\/title>)/) = title1;
-				document.getElementById("t1").innerHTML = title1
 			})()
+			document.getElementById("t1").innerHTML = title1
 		</script>
     </body>
 </html>
